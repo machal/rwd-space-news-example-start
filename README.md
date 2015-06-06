@@ -1,7 +1,6 @@
-# Příklad ke školením responzivního designu
+# Příklad ke školení responzivního designu
 
 Responzivní design: http://www.vzhurudolu.cz/kurzy/responzivni-design
-Pokročilý responzivní design: http://www.vzhurudolu.cz/kurzy/pokrocily-responzivni-design
 
 **Autor:** Martin Michálek, martin@vzhurudolu.cz
 
@@ -16,7 +15,6 @@ Pokročilý responzivní design: http://www.vzhurudolu.cz/kurzy/pokrocily-respon
 
 Kompilujeme do `dist/css/style.css`.
 
-
 ## Javascript
 
 * `src/js/index.js` – hlavní JS soubor
@@ -28,6 +26,8 @@ Závislosti řešíme pomocí Browserify.
 Závislosti (jQuery, Fancybox nebo Normalize.CSS) spravujeme pomocí https://www.npmjs.com/.
 
 Viz `package.json`.
+
+Pro instalaci projektu dejte `npm install`.
 
 ## Grunt a automatizace
 
