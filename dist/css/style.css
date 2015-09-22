@@ -31,7 +31,7 @@ body,
 input,
 textarea,
 select {
-  font: 18px/24px 'Vollkorn', Georgia, serif;
+  font: 1rem/1.5rem 'Vollkorn', Georgia, serif;
   color: #2f2222;
 }
 p,
@@ -43,7 +43,7 @@ iframe {
   padding-top: 0;
   margin-top: 0;
   padding-bottom: 0;
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 h1,
 h2,
@@ -54,20 +54,20 @@ h6 {
   padding-top: 0;
   margin-top: 0;
   padding-bottom: 0;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   font-family: 'Exo', Arial, sans-serif;
   font-weight: normal;
   line-height: 1.3;
   color: #6f6666;
 }
 h2 {
-  margin-top: 32px;
+  margin-top: 2rem;
 }
 a img {
   border: 0;
 }
 a {
-  color: red;
+  color: #ff0000;
 }
 @font-face {
   font-family: 'Exo';
@@ -106,6 +106,11 @@ a {
 }
 /*
 
+--- Media v obsahu ---
+
+*/
+/*
+
 --- Tabulka v obsahu ---
 
 */
@@ -131,9 +136,9 @@ th img {
 */
 .foot {
   text-align: center;
-  margin-top: 48px;
+  margin-top: 3rem;
   clear: both;
-  padding: 16px 30px;
+  padding: 1.125rem 30px;
   background-color: #2f2222;
   color: white;
 }
@@ -141,15 +146,16 @@ th img {
   color: white;
 }
 .foot-socials h2 {
-  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
 }
 .foot-socials-icon {
   display: inline-block;
   margin-left: 7.5px;
   opacity: .8;
-  transition: 200ms;
-  width: 48px;
-  height: 48px;
+  -webkit-transition: 200ms;
+          transition: 200ms;
+  width: 3rem;
+  height: 3rem;
 }
 .foot-socials-icon:first-child {
   margin-left: 0;
@@ -158,7 +164,9 @@ th img {
 .foot-socials-icon:focus,
 .foot-socials-icon:active {
   opacity: 1;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 /*
 
@@ -176,16 +184,14 @@ th img {
 .gallery-item {
   float: left;
   width: 170px;
-  margin: 0 15px 15px 0;
+  margin: 0 15px 1.125rem 0;
 }
 .gallery-item img {
   width: 170px;
+  height: 95px;
 }
 .gallery-item a {
   margin-bottom: 4px;
-}
-.gallery-item.last {
-  margin-right: 0;
 }
 /*
 
@@ -195,7 +201,7 @@ th img {
 .head {
   background: #2f2222 url('../img/bitmap/head_aurora_medium.jpg') no-repeat center center;
   background-size: cover;
-  padding: 24px 15px;
+  padding: 1.5rem 15px;
 }
 .head:before,
 .head:after {
@@ -216,7 +222,7 @@ th img {
 */
 .nav {
   border-top: 1px solid #fff;
-  margin-bottom: 32px;
+  margin-bottom: 2.25rem;
   background: #2f2222;
 }
 @media print {
@@ -240,7 +246,7 @@ th img {
 .nav-item {
   display: block;
   border-bottom: 1px solid #fff;
-  padding: 16px;
+  padding: 1.125rem 15px;
   text-decoration: none;
   text-align: center;
   overflow: hidden;
@@ -273,10 +279,12 @@ b .nav-item,
 */
 .similar-articles {
   list-style-type: none;
-  margin: 0 0 24px;
+  margin: 0 0 1.5rem;
   padding: 0;
 }
 .similar-article {
-  margin: 0 0 12px 0;
+  margin: 0 0 0.75rem 0;
   padding: 0;
 }
+
+/*# sourceMappingURL=style.css.map */

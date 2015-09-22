@@ -7,9 +7,9 @@
 
 .foot {
   text-align: center;
-  margin-top: 48px;
+  margin-top: (@line-height-base * 2);
   clear: both;
-  padding: 16px 30px;
+  padding: (@line-height-base * .75) 30px;
   background-color: @color-dark;
   color: white;
 }
@@ -29,8 +29,8 @@
   margin-left: @gutter/2;
   opacity: .8;
   transition: 200ms;
-  width: @line-height-base*2;
-  height: @line-height-base*2;
+  width: (@line-height-base * 2);
+  height: (@line-height-base * 2);
 
   &:first-child {
     margin-left: 0;
