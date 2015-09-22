@@ -286,5 +286,43 @@ b .nav-item,
   margin: 0 0 0.75rem 0;
   padding: 0;
 }
+/*
+
+--- Kontejner pro obsah stranky ---
+
+*/
+.container:before,
+.container:after {
+  content: " ";
+  display: table;
+}
+.container:after {
+  clear: both;
+}
+/*
+
+--- Hlavni obsah stranky ---
+
+*/
+.content {
+  margin-bottom: 3rem;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/*
+
+--- Vedlejsi obsah stranky ---
+
+*/
+.side {
+  margin-bottom: 3rem;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/*
+
+--- Layout - pro siroke displeje ---
+
+*/
 
 /*# sourceMappingURL=style.css.map */
