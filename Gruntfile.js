@@ -1,7 +1,7 @@
 /*
 
-Ukoly nad assety: kombilace CSS, JS, zmensovani IMG…
-=====================================================
+Ukoly nad assety: kombilace CSS, JS…
+====================================
 
 */
 
@@ -140,63 +140,6 @@ module.exports = function(grunt) {
       }
     },
 
-    // 3) Obrazky
-    // ==========
-
-    // Imagemin: zmensovani datoveho objemu obrazku
-    // --------------------------------------------
-
-    imagemin: {
-      // Root
-      root: {
-        files: [{
-          expand: true,
-          cwd: 'src/img/',
-          src: ['**/*.jpg','**/*.png','**/*.gif'],
-          dest: 'dist/img/'
-        }]
-      },
-      // Bitmapy v designu
-      bitmap: {
-        files: [{
-          expand: true,
-          cwd: 'src/img/bitmap/',
-          src: ['**/*.jpg','**/*.png','**/*.gif'],
-          dest: 'dist/img/bitmap/'
-        }]
-      },
-      // Obrazky v obsahu
-      content_img: {
-        files: [{
-          expand: true,
-          cwd: 'src/img/content/',
-          src: ['**/*.jpg','**/*.png','**/*.gif'],
-          dest: 'dist/img/content/'
-        }]
-      },
-      // Vektory
-      vector: {
-        files: [{
-          expand: true,
-          cwd: 'src/img/vector/',
-          src: ['**/*.svg'],
-          dest: 'dist/img/vector/'
-        }]
-      },
-    },
-
-    // SVG2PNG
-    // -------
-    // Z SVG obrazku dela PNG kopie pro fallbacky.
-
-    svg2png: {
-      images: {
-        files: [
-            { cwd: 'dist/img/vector/', src: ['**/*.svg'] }
-        ]
-      }
-    },
-
     // 4) browserSync a watch
     // ======================
 
@@ -245,7 +188,6 @@ module.exports = function(grunt) {
   // ==============
 
   grunt.registerTask('css', ['less:default', 'autoprefixer']);
-  grunt.registerTask('img', ['imagemin', 'svg2png']);
   grunt.registerTask('js', ['browserify', 'uglify']);
   grunt.registerTask('default', ['copy:fancybox', 'css', 'js', 'browserSync', 'watch']);
 
