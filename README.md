@@ -21,20 +21,41 @@ Kompilujeme do `dist/css/style.css`.
 
 Závislosti řešíme pomocí Browserify.
 
-## Závislosti a npm
+## Závislosti 
 
-Závislosti (jQuery, Fancybox nebo Normalize.CSS) spravujeme pomocí https://www.npmjs.com/.
+### Vývojářské závislosti – npm
 
-Viz `package.json`.
+Vývojářské závislosti ([Grunt](http://www.vzhurudolu.cz/prirucka/grunt) a [pluginy](http://www.vzhurudolu.cz/prirucka/grunt-pluginy), které pomáhají vývojáři) spravujeme pomocí https://www.npmjs.com/. Viz konfigurák [package.json](./package.json).
 
-Pro instalaci projektu dejte `npm install`.
+### Uživatelské závislosti - Bower
 
-## Grunt a automatizace
+Uživatelské závislosti (jQuery a pluginy, které potřebuje uživatel webu) spravujeme pomocí [Boweru](http://www.vzhurudolu.cz/prirucka/bower). Viz konfigurák [bower.json](./bower.json).
+
+## Sestavování pomocí Grunt.js
 
 Důležité tásky:
 
 * `grunt` - spustí vše a nastartuje vývojový server, otevře prohlížeč s nastartovanou synchronizací a pustí hlídání změn
 * Pro jednotlivé typy assetů se může hodit `grunt img`, `grunt css`, `grunt js`.
+
+Viz [Gruntfile.js](./Gruntfile.js).
+
+## Instalace projektu
+
+Nejprve si musíte nainstalovat [NPM a celý Node.js ekosystém](http://www.vzhurudolu.cz/prirucka/node-instalace).
+
+Pak tento konkrétní projekt:
+
+```bash
+# naklonování projektu
+git clone https://github.com/machal/space-example.git
+# vývojářské závislosti
+npm install
+# uživatelské závislosti
+bower install
+# spuštění hlavního Grunt tasku
+grunt
+```
 
 
 
