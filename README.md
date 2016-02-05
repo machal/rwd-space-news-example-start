@@ -1,8 +1,19 @@
 # Příklad ke školení responzivního designu
 
-Responzivní design: http://www.vzhurudolu.cz/kurzy/responzivni-design
+## Instalace projektu
 
-**Autor:** Martin Michálek, martin@vzhurudolu.cz
+Nejprve si musíte nainstalovat [NPM a celý Node.js ekosystém](http://www.vzhurudolu.cz/prirucka/node-instalace).
+
+Pak tento konkrétní projekt:
+
+```bash
+# naklonování projektu
+git clone https://github.com/machal/space-example.git
+# závislosti
+npm install
+# spuštění hlavního Grunt tasku
+grunt
+```
 
 ## Struktura stylů
 
@@ -23,13 +34,11 @@ Závislosti řešíme pomocí Browserify.
 
 ## Závislosti 
 
-### Vývojářské závislosti – npm
+### Vývojářské i uživatelské závislosti – NPM
 
-Vývojářské závislosti ([Grunt](http://www.vzhurudolu.cz/prirucka/grunt) a [pluginy](http://www.vzhurudolu.cz/prirucka/grunt-pluginy), které pomáhají vývojáři) spravujeme pomocí https://www.npmjs.com/. Viz konfigurák [package.json](./package.json).
-
-### Uživatelské závislosti - Bower
-
-Uživatelské závislosti (jQuery a pluginy, které potřebuje uživatel webu) spravujeme pomocí [Boweru](http://www.vzhurudolu.cz/prirucka/bower). Viz konfigurák [bower.json](./bower.json).
+Vývojářské závislosti ([Grunt](http://www.vzhurudolu.cz/prirucka/grunt) a [pluginy](http://www.vzhurudolu.cz/prirucka/grunt-pluginy), 
+které potřebuje vývojář) ale i uživatelské závislosti (jQuery a pluginy, které potřebuje uživatel webu) 
+spravujeme spravujeme pomocí [Node Packages Managera](https://www.npmjs.com/). Viz konfigurák [package.json](./package.json).
 
 ## Sestavování pomocí Grunt.js
 
@@ -40,30 +49,8 @@ Důležité tásky:
 
 Viz [Gruntfile.js](./Gruntfile.js).
 
-## Instalace projektu
+---
 
-Nejprve si musíte nainstalovat [NPM a celý Node.js ekosystém](http://www.vzhurudolu.cz/prirucka/node-instalace).
+Autor: Martin Michálek, martin@vzhurudolu.cz
 
-Pak tento konkrétní projekt:
-
-```bash
-# naklonování projektu
-git clone https://github.com/machal/space-example.git
-# vývojářské závislosti
-npm install
-# uživatelské závislosti
-bower install
-# spuštění hlavního Grunt tasku
-grunt
-```
-
-
-
-
-
-
-
-
-
-
-
+Určeno pro [školení responzivního designu](http://www.vzhurudolu.cz/kurzy/responzivni-design).
