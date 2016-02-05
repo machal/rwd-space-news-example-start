@@ -3,6 +3,12 @@
 Ukoly nad assety: kombilace CSS, JS…
 ====================================
 
+1) Kopirovani souboru
+2) CSS: LESS, PostCSS
+3) JS: spojeni do jednoho a minifikace
+4) Workflow: BrowserSync, watch
+5) Alias tasky: css, js, default
+
 */
 
 module.exports = function(grunt) {
@@ -20,8 +26,8 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
-    // Rename
-    // ======
+    // 1) Kopirovani souboru
+    // ---------------------    
 
     copy: {
       fancybox: {
@@ -45,80 +51,56 @@ module.exports = function(grunt) {
       },
     },
 
-    // CSS
-    // ===
+    // 2) CSS: LESS, PostCSS
+    // ---------------------
 
-    // LESS kompilace
-    // --------------
+    // LESS -> CSS
 
     less: {
       default: {
         files: {
           'dist/css/style.css': 'src/less/index.less'
-        }
-      },
-      sourcemaps: {
-        files: {
-          'dist/css/style.css': 'src/less/index.less'
         },
         options: {
           sourceMap: true,
-          // sourceMapFilename:
-          // Pokud nastaveno, zapise se SM do
-          // externiho souboru. Uvadi se zde cesta k nemu.
           sourceMapFilename: 'dist/css/style.css.map',
-          // sourceMapURL:
-          // Prepise vychozi url pro soubor se SM,
-          // tak jak se vola na konci zkompilovaneho CSS souboru.
-          // Vychozi je obsah `sourceMapFilename`, tady jde prepsat.
           sourceMapURL: 'style.css.map',
-          // sourceMapRootpath:
-          // Cesta k LESS souborum jek budou volany ze souboru se SM.
-          sourceMapRootpath: '/',
-          // Komprimovat timto? contrib-css odstranoval sourcemapy
-          //compress: true,
+          sourceMapRootpath: './'
         }
       }
     },
 
-    // Autoprefixer
-    // ------------
 
-    // Automaticky pridava browser prefixy co vykompilovaneho CSS.
+    // PostCSS
 
-    autoprefixer: {
+    postcss: {
       options: {
-        browsers: ['last 3 versions', 'ios 6', 'ie 7', 'ie 8', 'ie 9'],
-        map: true // Updatni SourceMap
+        map: true,
+        processors: [
+          require('pixrem')({rootValue: 16}), // rem -> px fallback
+          require('autoprefixer')({browsers: ['last 3 versions', 'ios 6', 'ie 7', 'ie 8', 'ie 9']}), // pridani prefixu
+        ]
       },
-      style: {
-          src: 'dist/css/style.css',
-          dest: 'dist/css/style.css'
+      dist: {
+        src: 'dist/css/style.css'
       }
-    },
+    },    
 
 
     // CSSmin
-    // ------
-
-    // Minifikujeme inlinované CSSka.
-    // Nepoužíváme na style.css, protože odstraňuje SourceMapy. Ale bylo
-    // by to efektivnější než minifikovat LESSem.
 
     cssmin: {
-      inline_css: {
-          files: [{
-            expand: true,
-            cwd: 'dist/css/critical/',
-            src: ['*.css', '!*.min.css'],
-            dest: 'dist/css/critical/',
-            ext: '.min.css'
-          }]
+      default: {
+        files: {
+          'dist/css/style.min.css': 'dist/css/style.css'
         }
+      }  
     },
 
-    // Javascript
-    // ==========
+    // 3) JS: spojeni do jednoho a minifikace
+    // --------------------------------------
+
+    // Spojeni JS do jednoho
 
     browserify : {
       main : {
@@ -130,8 +112,7 @@ module.exports = function(grunt) {
       }
     },
 
-    // Uglify: minifikace JS
-    // ---------------------
+    // Uglify - minifikace JS
 
     uglify: {
       script: {
@@ -140,11 +121,10 @@ module.exports = function(grunt) {
       }
     },
 
-    // 4) browserSync a watch
-    // ======================
+    // 4) Workflow: BrowserSync, watch
+    // --------------------------------
 
     // browserSync
-    // -----------
 
     // Spusti server na http://localhost:3000/, externe pak na
     // adrese, kterou zobrazi pri startu.
@@ -176,7 +156,7 @@ module.exports = function(grunt) {
         tasks: ['css']
       },
       js: {
-        files: 'src/js/*.js',
+        files: 'src/js/**/*.js',
         tasks: ['js']
       }
     },
@@ -187,8 +167,8 @@ module.exports = function(grunt) {
   // 5) Alias tasky
   // ==============
 
-  grunt.registerTask('css', ['less:default', 'autoprefixer']);
+  grunt.registerTask('css', ['less', 'postcss', 'cssmin']);
   grunt.registerTask('js', ['browserify', 'uglify']);
-  grunt.registerTask('default', ['copy:fancybox', 'css', 'js', 'browserSync', 'watch']);
+  grunt.registerTask('default', ['copy', 'css', 'js', 'browserSync', 'watch']);
 
 };

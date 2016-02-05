@@ -23,9 +23,11 @@
     "grunt-contrib-less": "^1.2.0",
     "grunt-contrib-uglify": "^0.11.0",
     "grunt-contrib-watch": "^0.6.1",
+    "grunt-postcss": "^0.7.1",
     "jit-grunt": "^0.9.1",
     "time-grunt": "^1.1.0",
-    "debowerify": "^1.2.1"
+    "debowerify": "^1.2.1",
+    "pixrem": "^3.0.0"
   },
   "dependencies": {
     "jquery": "^2.1.3",
