@@ -34,8 +34,8 @@ body,
 input,
 textarea,
 select {
-  font: 16px/24px 'Vollkorn', Georgia, serif;
-  font: 1rem/1.5rem 'Vollkorn', Georgia, serif;
+  font: 16px/1.5 'Vollkorn', Georgia, serif;
+  font: 1rem/1.5 'Vollkorn', Georgia, serif;
   color: #2f2222;
 }
 p,
@@ -60,15 +60,15 @@ h6 {
   margin-top: 0;
   padding-bottom: 0;
   margin-bottom: 8px;
-  margin-bottom: 0.5rem;
+  margin-bottom: .5rem;
   font-family: 'Exo', Arial, sans-serif;
   font-weight: normal;
   line-height: 1.3;
   color: #6f6666;
 }
 h2 {
-  margin-top: 32px;
-  margin-top: 2rem;
+  margin-top: 8px;
+  margin-top: .5rem;
 }
 a img {
   border: 0;
@@ -131,7 +131,8 @@ table {
 td,
 th {
   text-align: left;
-  padding: 10px 5px;
+  padding: 12px 4px;
+  padding: .75rem .25rem;
   border-bottom: 1px solid #ccc;
 }
 td img,
@@ -149,8 +150,8 @@ Paticka webu
   margin-top: 48px;
   margin-top: 3rem;
   clear: both;
-  padding: 18px 30px;
-  padding: 1.125rem 30px;
+  padding: 16px 32px;
+  padding: 1rem 2rem;
   background-color: #2f2222;
   color: white;
 }
@@ -200,8 +201,7 @@ Fotogalerie
 .gallery-item {
   float: left;
   width: 170px;
-  margin: 0 15px 18px 0;
-  margin: 0 15px 1.125rem 0;
+  margin: 0 15px 16px 0;
 }
 .gallery-item img {
   width: 170px;
@@ -242,8 +242,8 @@ Navigace
 */
 .nav {
   border-top: 1px solid #fff;
-  margin-bottom: 36px;
-  margin-bottom: 2.25rem;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
   background: #2f2222;
 }
 @media print {
@@ -267,8 +267,8 @@ Navigace
 .nav-item {
   display: block;
   border-bottom: 1px solid #fff;
-  padding: 18px 15px;
-  padding: 1.125rem 15px;
+  padding: 16px 15px;
+  padding: 1rem 15px;
   text-decoration: none;
   text-align: center;
   overflow: hidden;
@@ -303,13 +303,13 @@ Podobne clanky
 */
 .similar-articles {
   list-style-type: none;
-  margin: 0 0 24px;
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.rem;
+  margin: 0 0 1.rem;
   padding: 0;
 }
 .similar-article {
   margin: 0 0 12px 0;
-  margin: 0 0 0.75rem 0;
+  margin: 0 0 .75rem 0;
   padding: 0;
 }
 /*
