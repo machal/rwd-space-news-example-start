@@ -6,7 +6,8 @@
 */
 /*
 
---- Helpery ---
+Helpery
+=======
 
 */
 .hide-on-screen {
@@ -15,12 +16,14 @@
 }
 /*
 
---- Promenne ---
+Promenne
+========
 
 */
 /*
 
---- Textova zakladna: typografie a barvy ---
+Textova zakladna: typografie a barvy
+====================================
 
 */
 body {
@@ -110,12 +113,14 @@ a {
 }
 /*
 
---- Media v obsahu ---
+Media v obsahu
+==============
 
 */
 /*
 
---- Tabulka v obsahu ---
+Tabulka v obsahu
+================
 
 */
 table {
@@ -135,7 +140,8 @@ th img {
 }
 /*
 
---- Paticka webu ---
+Paticka webu
+============
 
 */
 .foot {
@@ -179,7 +185,8 @@ th img {
 }
 /*
 
---- Fotogalerie ---
+Fotogalerie
+===========
 
 */
 .gallery:before,
@@ -205,7 +212,8 @@ th img {
 }
 /*
 
---- Hlavicka webu ---
+Hlavicka webu
+=============
 
 */
 .head {
@@ -228,7 +236,8 @@ th img {
 }
 /*
 
---- Navigace ---
+Navigace
+========
 
 */
 .nav {
@@ -278,7 +287,8 @@ b .nav-item,
 }
 /* 
 
---- Fotogalerie --- 
+Fotogalerie
+===========
 
 */
 .photo a,
@@ -287,7 +297,8 @@ b .nav-item,
 }
 /*
 
---- Podobne clanky ---
+Podobne clanky
+==============
 
 */
 .similar-articles {
@@ -303,7 +314,8 @@ b .nav-item,
 }
 /*
 
---- Kontejner pro obsah stranky ---
+Kontejner pro obsah stranky
+===========================
 
 */
 .container:before,
@@ -316,7 +328,8 @@ b .nav-item,
 }
 /*
 
---- Hlavni obsah stranky ---
+Hlavni obsah stranky
+====================
 
 */
 .content {
@@ -327,7 +340,8 @@ b .nav-item,
 }
 /*
 
---- Vedlejsi obsah stranky ---
+Vedlejsi obsah stranky
+======================
 
 */
 .side {
@@ -338,7 +352,8 @@ b .nav-item,
 }
 /*
 
---- Layout - pro siroke displeje ---
+Layout - pro siroke displeje
+============================
 
 */
 /*# sourceMappingURL=style.css.map */
