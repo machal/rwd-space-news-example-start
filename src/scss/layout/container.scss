@@ -1,0 +1,10 @@
+/*
+
+Kontejner pro obsah stranky
+===========================
+
+*/
+
+.container {
+  @include clearfix;
+}

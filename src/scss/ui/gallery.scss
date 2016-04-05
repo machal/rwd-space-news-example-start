@@ -1,0 +1,28 @@
+/*
+
+Fotogalerie
+===========
+
+*/
+
+$content-width: 540px;
+
+.gallery {
+  @include clearfix;
+}
+
+.gallery-item {
+	float: left;
+	width: 170px;	
+	margin: 0 15px 16px 0;
+}
+
+.gallery-item img {
+	width: 170px;
+	height: 95px;	
+}
+
+.gallery-item a {
+	margin-bottom: 4px;
+}
+

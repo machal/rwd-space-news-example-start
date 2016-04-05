@@ -1,0 +1,59 @@
+/*
+
+Navigace
+========
+
+*/
+
+.nav {
+  border-top: 1px solid #fff;
+  margin-bottom: 2rem;
+  background: $color-dark;
+}
+
+// V tisku nezobrazujeme
+
+@media print {
+  .nav {
+    display: none;
+  }
+}
+
+
+// Kontejner navigace
+
+.nav ul {
+  @include clearfix;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+// Polozka navigace: zakladna a male displeje
+
+.nav-item {
+  display: block;
+  border-bottom: 1px solid #fff;
+  padding: 1rem $gutter;
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// Polozka navigace: aktivni
+
+b .nav-item,
+.nav-item:hover,
+.nav-item:focus,
+.nav-item:active {
+  font-weight: normal;
+  color: #fff;
+}
+
+// Polozka navigace: posledni
+
+.nav li:last-child .nav-item {
+  border-bottom: none;
+}

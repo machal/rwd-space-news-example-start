@@ -70,6 +70,18 @@ module.exports = function(grunt) {
       }
     },
 
+    // Alternativne mozno SCSS -> CSS
+
+    sass: {
+        options: {
+            sourceMap: true
+        },
+        dist: {
+            files: {
+                'dist/css/style.css': 'src/scss/index.scss'
+            }
+        }
+    },
 
     // PostCSS
 
@@ -155,6 +167,10 @@ module.exports = function(grunt) {
         files: 'src/less/**/*.less',
         tasks: ['css']
       },
+      sass: {
+        files: 'src/scss/**/*.scss',
+        tasks: ['css']
+      },      
       js: {
         files: 'src/js/**/*.js',
         tasks: ['js']
@@ -167,7 +183,7 @@ module.exports = function(grunt) {
   // 5) Alias tasky
   // ==============
 
-  grunt.registerTask('css', ['less', 'postcss', 'cssmin']);
+  grunt.registerTask('css', ['sass', 'postcss', 'cssmin']);
   grunt.registerTask('js', ['browserify', 'uglify']);
   grunt.registerTask('default', ['copy', 'css', 'js', 'browserSync', 'watch']);
 
