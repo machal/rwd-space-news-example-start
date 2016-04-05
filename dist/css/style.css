@@ -118,9 +118,10 @@ table {
 td,
 th {
   text-align: left;
-  padding: 12px 4px;
-  padding: .75rem .25rem;
-  border-bottom: 1px solid #ccc; }
+  padding: .75em .25em;
+  border-bottom: 1px solid #ccc;
+  font-size: 12px;
+  font-size: .75rem; }
 
 td img,
 th img {
@@ -185,12 +186,10 @@ Fotogalerie
 
 .gallery-item {
   float: left;
-  width: 170px;
+  width: 200px;
   margin: 0 15px 16px 0; }
-
-.gallery-item img {
-  width: 170px;
-  height: 95px; }
+  .gallery-item.last {
+    margin-right: 0; }
 
 .gallery-item a {
   margin-bottom: 4px; }
@@ -244,7 +243,6 @@ Navigace
 
 .nav-item {
   display: block;
-  border-bottom: 1px solid #fff;
   padding: 16px 15px;
   padding: 1rem 15px;
   text-decoration: none;
@@ -260,8 +258,13 @@ b .nav-item,
   font-weight: normal;
   color: #fff; }
 
-.nav li:last-child .nav-item {
-  border-bottom: none; }
+.nav li {
+  box-sizing: border-box;
+  float: left;
+  width: 20%;
+  border-right: 1px solid #fff; }
+  .nav li:first-child {
+    border-left: 1px solid #fff; }
 
 /* 
 
@@ -333,4 +336,18 @@ Layout - pro siroke displeje
 ============================
 
 */
+.container {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto; }
+
+.content {
+  width: 660px;
+  box-sizing: border-box;
+  float: left; }
+
+.side {
+  width: 320px;
+  box-sizing: border-box;
+  float: right; }
 /*# sourceMappingURL=style.css.map */

@@ -29,11 +29,10 @@ Navigace
   padding: 0;
 }
 
-// Polozka navigace: zakladna a male displeje
+// Polozka navigace: zakladna
 
 .nav-item {
   display: block;
-  border-bottom: 1px solid #fff;
   padding: 1rem $gutter;
   text-decoration: none;
   text-align: center;
@@ -52,8 +51,15 @@ b .nav-item,
   color: #fff;
 }
 
-// Polozka navigace: posledni
+// Layout
 
-.nav li:last-child .nav-item {
-  border-bottom: none;
+.nav li {
+  box-sizing: border-box;
+  float: left;
+  width: 20%;
+  border-right: 1px solid #fff;
+
+  &:first-child {
+    border-left: 1px solid #fff;
+  }
 }

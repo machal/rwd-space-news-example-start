@@ -5,21 +5,18 @@ Fotogalerie
 
 */
 
-$content-width: 540px;
-
 .gallery {
   @include clearfix;
 }
 
 .gallery-item {
 	float: left;
-	width: 170px;	
+	width: 200px;
 	margin: 0 15px 16px 0;
-}
 
-.gallery-item img {
-	width: 170px;
-	height: 95px;	
+  &.last {
+    margin-right: 0;
+  }
 }
 
 .gallery-item a {

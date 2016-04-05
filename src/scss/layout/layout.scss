@@ -5,3 +5,21 @@ Layout - pro siroke displeje
 
 */
 
+
+.container {
+  width: 980px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.content {
+  width: 660px;
+  box-sizing: border-box;
+  float: left;
+}
+
+.side {
+  width: 320px;
+  box-sizing: border-box;
+  float: right;
+}
