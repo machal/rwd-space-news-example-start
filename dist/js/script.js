@@ -2029,7 +2029,7 @@ module.exports = function(jQuery) {
 
 },{}],2:[function(require,module,exports){
 /*!
- * jQuery JavaScript Library v1.12.2
+ * jQuery JavaScript Library v1.12.3
  * http://jquery.com/
  *
  * Includes Sizzle.js
@@ -2039,7 +2039,7 @@ module.exports = function(jQuery) {
  * Released under the MIT license
  * http://jquery.org/license
  *
- * Date: 2016-03-17T17:44Z
+ * Date: 2016-04-05T19:16Z
  */
 
 (function( global, factory ) {
@@ -2095,7 +2095,7 @@ var support = {};
 
 
 var
-	version = "1.12.2",
+	version = "1.12.3",
 
 	// Define a local copy of jQuery
 	jQuery = function( selector, context ) {
@@ -12395,13 +12395,6 @@ function createActiveXHR() {
 
 
 
-// Prevent auto-execution of scripts when no explicit dataType was provided (See gh-2432)
-jQuery.ajaxPrefilter( function( s ) {
-	if ( s.crossDomain ) {
-		s.contents.script = false;
-	}
-} );
-
 // Install script dataType
 jQuery.ajaxSetup( {
 	accepts: {
@@ -12682,7 +12675,7 @@ jQuery.fn.load = function( url, params, callback ) {
 		// If it fails, this function gets "jqXHR", "status", "error"
 		} ).always( callback && function( jqXHR, status ) {
 			self.each( function() {
-				callback.apply( self, response || [ jqXHR.responseText, status, jqXHR ] );
+				callback.apply( this, response || [ jqXHR.responseText, status, jqXHR ] );
 			} );
 		} );
 	}

@@ -27,7 +27,7 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     // 1) Kopirovani souboru
-    // ---------------------    
+    // ---------------------
 
     copy: {
       fancybox: {
@@ -96,7 +96,7 @@ module.exports = function(grunt) {
       dist: {
         src: 'dist/css/style.css'
       }
-    },    
+    },
 
 
     // CSSmin
@@ -106,7 +106,7 @@ module.exports = function(grunt) {
         files: {
           'dist/css/style.min.css': 'dist/css/style.css'
         }
-      }  
+      }
     },
 
     // 3) JS: spojeni do jednoho a minifikace
@@ -152,7 +152,7 @@ module.exports = function(grunt) {
           },
           options: {
               watchTask: true,
-              proxy: 'sites.localhost'
+              server: './'
           }
       }
     },
@@ -170,7 +170,7 @@ module.exports = function(grunt) {
       sass: {
         files: 'src/scss/**/*.scss',
         tasks: ['css']
-      },      
+      },
       js: {
         files: 'src/js/**/*.js',
         tasks: ['js']
