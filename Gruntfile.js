@@ -91,6 +91,7 @@ module.exports = function(grunt) {
         processors: [
           require('pixrem')({rootValue: 16}), // rem -> px fallback
           require('autoprefixer')({browsers: ['last 3 versions', 'ios 6', 'ie 7', 'ie 8', 'ie 9']}), // pridani prefixu
+          require('postcss-em-media-query')({ })
         ]
       },
       dist: {

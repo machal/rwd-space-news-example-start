@@ -28,6 +28,7 @@
     "grunt-sass": "^1.1.0",
     "jit-grunt": "^0.10.0",
     "pixrem": "^3.0.0",
+    "postcss-em-media-query": "^1.0.1",
     "time-grunt": "^1.1.0"
   },
   "dependencies": {
