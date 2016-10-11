@@ -9,9 +9,14 @@ Pak tento konkrétní projekt:
 ```bash
 # naklonování projektu
 git clone https://github.com/machal/space-example.git
-# závislosti
+
+# přechod do adresáře
+cd space-example
+
+# instalace závislosti
 npm install
-# spuštění hlavního Grunt tasku
+
+# spuštění webu v prohlížeči hlavní Grunt úlohou
 grunt
 ```
 
@@ -24,7 +29,7 @@ grunt
 * `src/less/layout/` – layout stránky
 * `src/less/lib/` – knihovny
 
-Kompilujeme do `dist/css/style.css`.
+Gruntem kompilujeme do `dist/css/style.css`. Více [o organizaci CSS](http://www.vzhurudolu.cz/blog/29-organizace-css-2014).
 
 ## Javascript
 
@@ -32,12 +37,12 @@ Kompilujeme do `dist/css/style.css`.
 
 Závislosti řešíme pomocí Browserify.
 
-## Závislosti 
+## Závislosti
 
 ### Vývojářské i uživatelské závislosti – NPM
 
-Vývojářské závislosti ([Grunt](http://www.vzhurudolu.cz/prirucka/grunt) a [pluginy](http://www.vzhurudolu.cz/prirucka/grunt-pluginy), 
-které potřebuje vývojář) ale i uživatelské závislosti (jQuery a pluginy, které potřebuje uživatel webu) 
+Vývojářské závislosti ([Grunt](http://www.vzhurudolu.cz/prirucka/grunt) a [pluginy](http://www.vzhurudolu.cz/prirucka/grunt-pluginy),
+které potřebuje vývojář) ale i uživatelské závislosti (jQuery a pluginy, které potřebuje uživatel webu)
 spravujeme spravujeme pomocí [Node Packages Managera](https://www.npmjs.com/). Viz konfigurák [package.json](./package.json).
 
 ## Sestavování pomocí Grunt.js
