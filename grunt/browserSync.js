@@ -18,7 +18,15 @@ module.exports = {
     },
     options: {
         watchTask: true,
-        server: './'
+        server: './',
+        plugins: [
+            {
+                module: "bs-html-injector",
+                options: {
+                    files: "./*.html"
+                }
+            }
+        ]
     }
   }
 
